@@ -11,14 +11,14 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Librerías principales
-  flame: ^1.33.0           # Motor de juego 2D
-  flame_audio: ^2.11.11    # Sonido para Flame
-  just_audio: ^0.10.5      # Música en loop (para pantallas normales)
-  supabase_flutter: ^2.10.3  # Conexión con Supabase (DB y auth)
-  flutter_animate: ^4.5.2  # Animaciones suaves en UI
-  google_fonts: ^6.3.2     # Tipografías tipo pixel art
-  cupertino_icons: ^1.0.8  # Iconos iOS (uso general)
+  # ⚙️ Librerías principales
+  flame: ^1.13.1           # Motor de juego 2D actualizado (más estable que 1.33.0)
+  flame_audio: ^2.11.11    # Sonido y música dentro de Flame
+  just_audio: ^0.10.5      # Reproducción de música para pantallas normales
+  supabase_flutter: ^2.10.3 # Conexión con base de datos, auth y almacenamiento
+  flutter_animate: ^4.5.2  # Animaciones suaves y transiciones en UI
+  google_fonts: ^6.3.2     # Tipografías pixel art retro
+  cupertino_icons: ^1.0.8  # Iconos iOS y genéricos
 
 dev_dependencies:
   flutter_test:
@@ -29,20 +29,37 @@ flutter:
   uses-material-design: true
 
   assets:
+    # 🌕 Fondos del modo historia (introducción)
+    - assets/images/luna_roja.png
+
     # 🎨 Fondos del lobby (Capilla Lunar)
     - assets/images/lobby/bg_layer_0.png
     - assets/images/lobby/bg_layer_1.png
     - assets/images/lobby/bg_layer_2.png
     - assets/images/lobby/fg_candles.png
 
-    # 🧍 UI y personajes
-    - assets/images/ui/avatar_default.png
+    # 🧍 Sprites del jugador y enemigos (modo batalla)
+    - assets/images/player/idle.png
+    - assets/images/player/attack.png
+    - assets/images/enemies/bat.png
+    - assets/images/enemies/ghoul.png
 
-    # 🔊 Música y efectos
-    - assets/audio/requiem_eclipse.ogg
+    # 🧩 Interfaz y UI
+    - assets/images/ui/avatar_default.png
+    - assets/images/ui/health_bar.png
+    - assets/images/ui/enemy_bar.png
+
+    # 🔊 Música y efectos de sonido
+    - assets/audio/requiem_of_eclipse.mp3
+    - assets/audio/sword_swing.wav
+    - assets/audio/hit_enemy.wav
+    - assets/audio/player_hurt.wav
 
   fonts:
-    # Fuente tipo pixel art (usa Press Start 2P desde google_fonts)
+    # 💀 Fuente tipo pixel art (Press Start 2P o VT323)
     - family: PressStart2P
       fonts:
         - asset: fonts/PressStart2P-Regular.ttf
+    - family: VT323
+      fonts:
+        - asset: fonts/VT323-Regular.ttf
