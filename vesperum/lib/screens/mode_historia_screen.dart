@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flame_audio/flame_audio.dart';
 import '../services/supabase_service.dart';
-import 'package:vesperum/game/vesperum_battle.dart'; // ✅
-
+import 'package:vesperum/game/vesperum_battle.dart';
 
 class ModeHistoriaScreen extends StatefulWidget {
   final String nombreJugador;
